@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fantasy League Comparison</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="league-name">Fantasy League Comparison</h1>
+    <p id="updated-at" class="muted"></p>
+  </header>
+
+  <main>
+    <form class="controls">
+      <label>Team
+        <select id="team-select"></select>
+      </label>
+      <label>Period
+        <select id="period-select"></select>
+      </label>
+    </form>
+
+    <p id="summary"></p>
+    <p id="message" role="alert"></p>
+
+    <div class="table-wrap">
+      <table id="comparison">
+        <thead></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <p class="muted">
+      Each row shows how the selected team would have done against that opponent. Cells show the opponent's value:
+      <span class="chip win">you win the category</span>
+      <span class="chip loss">opponent wins</span>
+      <span class="chip tie">tie</span>
+    </p>
+    <p class="muted">
+      In the selected team's own row:
+      <span class="chip sweep-win">wins the category against every opponent</span>
+      <span class="chip sweep-loss">loses it against every opponent</span>
+    </p>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

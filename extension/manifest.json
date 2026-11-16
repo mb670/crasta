@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Fantasy League Data Export",
+  "version": "1.0.0",
+  "description": "Reads your Yahoo Fantasy Basketball league stats and downloads them as data.json for the league comparison site.",
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["https://basketball.fantasysports.yahoo.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Export league data (click while on your Yahoo league page)"
+  }
+}
